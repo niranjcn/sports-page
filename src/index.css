@@ -1,3 +1,7 @@
+/* In your global CSS or Tailwind custom config */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+

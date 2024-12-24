@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll'; 
 import stmlogo from '../assets/images/stthomaskannur.png';
 
 const Nav = () => {
@@ -10,13 +11,20 @@ const Nav = () => {
         </div>
         <div>
           <div className="space-x-6 flex mr-14 text-sm font-semibold text-cyan-700">
-            <a href="#" className="hover:text-emerald-800 transition-colors duration-300">HOME</a>
-            <a href="#" className="hover:text-emerald-800 transition-colors duration-300">SCORE</a>
-            <a href="#" className="hover:text-emerald-800 transition-colors duration-300">EVENTS</a>
-            <a href="#" className="hover:text-emerald-800 transition-colors duration-300">GALLERY</a>
-            <a href="#" className="hover:text-emerald-800 transition-colors duration-300">TEAMS</a>
-            <a href="#" className="hover:text-emerald-800 transition-colors duration-300">STATISTICS</a>
-            <a href="#" className="hover:text-emerald-800 transition-colors duration-300">REGISTER NOW</a>
+            <Link to="slider" smooth={true} duration={500} className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">
+              HOME
+            </Link>
+            <Link to="gallery" smooth={true} duration={500} className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">
+              GALLERY
+            </Link>
+            <Link to="coordinators" smooth={true} duration={500} className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">
+              COORDINATORS
+            </Link>
+            <a href="#score" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">SCORE</a>
+            <a href="#events" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">EVENTS</a>
+            <a href="#teams" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">TEAMS</a>
+            <a href="#statistics" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">STATISTICS</a>
+            <a href="#register" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">REGISTER NOW</a>
           </div>
         </div>
       </nav>
@@ -25,5 +33,7 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
 
 
