@@ -5,6 +5,7 @@ import Gallery from './components/Gallery.jsx';
 import Coordinators from './components/Coordinators.jsx';
 import Footer from './components/Footer.jsx';
 import './App.css';
+import Scoreboard from './components/Scoreboard.jsx';
 
 function App() {
   return (
@@ -23,9 +24,13 @@ function App() {
           <Gallery />
         </section>
 
-        <section id='footer'>
-          <Footer></Footer>
+       
+        <section id="scoreboard">
+          <Scoreboard />
         </section>
+        
+        <Footer />
+
         
       </div>
     </>
