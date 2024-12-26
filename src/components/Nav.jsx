@@ -20,7 +20,9 @@ const Nav = () => {
             <Link to="coordinators" smooth={true} duration={500} className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">
               COORDINATORS
             </Link>
-            <a href="#score" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">SCORE</a>
+            <Link to="scoreboard" smooth={true} duration={500} className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">
+              SCORES
+            </Link>
             <a href="#events" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">EVENTS</a>
             <a href="#teams" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">TEAMS</a>
             <a href="#statistics" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">STATISTICS</a>
