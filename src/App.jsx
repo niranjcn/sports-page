@@ -3,6 +3,7 @@ import Nav from './components/Nav.jsx';
 import Slider from './components/Slider.jsx';
 import Gallery from './components/Gallery.jsx';
 import Coordinators from './components/Coordinators.jsx';
+import Footer from './components/Footer.jsx';
 import './App.css';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
           <Gallery />
         </section>
 
+        <section id='footer'>
+          <Footer></Footer>
+        </section>
         
       </div>
     </>
