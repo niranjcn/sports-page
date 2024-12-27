@@ -6,6 +6,7 @@ import Coordinators from './components/Coordinators.jsx';
 import Footer from './components/Footer.jsx';
 import './App.css';
 import Scoreboard from './components/Scoreboard.jsx';
+import Teams from './components/Teams.jsx';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <section id="gallery">
           <Gallery />
         </section>
+
+        <Teams />
 
        
         <section id="scoreboard">
