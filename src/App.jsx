@@ -3,8 +3,9 @@ import Nav from './components/Nav.jsx';
 import Slider from './components/Slider.jsx';
 import Gallery from './components/Gallery.jsx';
 import Coordinators from './components/Coordinators.jsx';
-import './App.css';
+import Events from './components/Events.jsx';
 
+import './App.css';
 function App() {
   return (
     <>
@@ -21,6 +22,10 @@ function App() {
         <section id="gallery">
           <Gallery />
         </section>
+
+       
+          <Events />
+
 
         
       </div>
