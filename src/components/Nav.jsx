@@ -84,7 +84,7 @@ const Nav = () => {
                 to="slider"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
+                className="text-lg cursor-pointer font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 HOME
@@ -93,7 +93,7 @@ const Nav = () => {
                 to="gallery"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
+                className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 GALLERY
@@ -102,7 +102,7 @@ const Nav = () => {
                 to="coordinators"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
+                className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 COORDINATORS
@@ -111,35 +111,39 @@ const Nav = () => {
                 to="scoreboard"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
+                className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 SCORES
               </Link>
-              <a
-                href="events"
-                className="text-lg font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
+              <Link
+                to="events"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 EVENTS
-              </a>
-              <a
-                href="teams"
-                className="text-lg font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
+              </Link>
+              <Link
+                to="teams"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 TEAMS
-              </a>
+              </Link>
               <a
                 href="#statistics"
-                className="text-lg font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
+                className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 STATISTICS
               </a>
               <a
                 href="#register"
-                className="text-lg font-semibold text-cyan-700 hover:text-emerald-800 w-full text-center"
+                className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 REGISTER NOW
