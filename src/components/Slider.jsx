@@ -52,21 +52,21 @@ function Slider() {
   }, [currentIndex]); // Re-run this effect whenever `currentIndex` changes
 
   return (
-    <div className='max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group'>
+    <div className="max-w-full h-auto w-full m-auto py-16 px-4 relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+        className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] rounded-2xl bg-center bg-cover duration-500"
       ></div>
       {/* Left Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <div className="hidden group-hover:block absolute top-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <div className="hidden group-hover:block absolute top-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       {/* Dot Navigation */}
-      <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex'>
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex">
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
@@ -84,5 +84,6 @@ function Slider() {
 }
 
 export default Slider;
+
 
 

@@ -2,8 +2,8 @@ import React from "react";
 
 const Teams = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 px-8">
-      <h1 className="text-4xl font-bold text-white mb-20">OUR TEAMS</h1>
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 px-8 py-12">
+      <h1 className="text-4xl font-bold text-white mb-12">OUR TEAMS</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <a
           href="https://example.com/team1"
@@ -98,3 +98,5 @@ const Teams = () => {
 };
 
 export default Teams;
+
+
