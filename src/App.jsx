@@ -21,6 +21,10 @@ function App() {
           <Slider />
         </section>
 
+        <section id="teams">
+          <Teams />
+        </section>
+
         <section id="coordinators">
           <Coordinators />
         </section>
@@ -38,9 +42,7 @@ function App() {
           <Events />
         </section>
 
-        <section id="teams">
-          <Teams />
-        </section>
+       
 
        
         
