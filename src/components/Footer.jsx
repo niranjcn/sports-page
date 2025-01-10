@@ -2,9 +2,8 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-r from-black to-blue-900 bg-opacity-70 text-white py-6 ">
+        <footer className="bg-gradient-to-b from-gray-900 to-black bg-opacity-80 text-white py-6">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-1 gap-6 text-center md:text-left">
-            
                 <div>
                     <h3 className="text-center font-bold mb-2">Follow Us</h3>
                     <div className="flex justify-center md:justify-center">
@@ -20,7 +19,6 @@ const Footer = () => {
                                 className="w-6 h-6 inline"
                             />
                         </a>
-
                     </div>
                 </div>
             </div>
