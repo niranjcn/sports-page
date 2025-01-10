@@ -19,9 +19,9 @@ function Gallery() {
   };
 
   return (
-    <main className="w-full h-auto bg-gray-900 py-16">
-      <div className="text-center mb-20">
-        <h1 className="text-4xl font-bold text-cyan-700">GALLERY</h1>
+    <main className="w-full h-auto bg-gray-100 py-16">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-semibold text-gray-800">Gallery</h1>
       </div>
 
       {/* Main Gallery */}
@@ -50,7 +50,7 @@ function Gallery() {
             <div
               key={index}
               onClick={() => handleClick(index)}
-              className={`relative h-64 rounded-lg overflow-hidden cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-105 border-4 border-gray-700`}
+              className={`relative h-64 rounded-lg overflow-hidden cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-105`}
             >
               <img
                 src={panel.image}
@@ -66,3 +66,4 @@ function Gallery() {
 }
 
 export default Gallery;
+

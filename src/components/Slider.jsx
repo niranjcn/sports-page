@@ -52,10 +52,10 @@ function Slider() {
   }, [currentIndex]); // Re-run this effect whenever `currentIndex` changes
 
   return (
-    <div className="max-w-full h-auto w-full m-auto py-16 px-4 relative group bg-gray-900">
+    <div className="max-w-full h-auto w-full m-auto py-16 px-4 relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] rounded-2xl bg-center bg-cover transition-all transform duration-1000 ease-in-out hover:scale-105"
+        className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] rounded-2xl bg-center bg-cover duration-500"
       ></div>
       {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
@@ -84,3 +84,6 @@ function Slider() {
 }
 
 export default Slider;
+
+
+
