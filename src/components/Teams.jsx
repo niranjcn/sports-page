@@ -11,7 +11,7 @@ const Teams = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Team 1 */}
         <a
-          href="https://example.com/team1"
+          href="https://stthomaskannur.ac.in/ignite/dpoints/team/green.php"
           target="_blank"
           rel="noopener noreferrer"
           className="relative block p-6 bg-gray-800 text-white rounded-lg shadow-md transform transition-transform duration-700 hover:scale-110 hover:shadow-[0_4px_60px_rgba(0,255,255,1),0_0_80px_rgba(0,255,255,1)]"
@@ -30,12 +30,12 @@ const Teams = () => {
               borderRadius: "inherit"
             }}
           ></div>
-          <h2 className="relative z-10 mt-4 text-center text-lg font-bold">Title 1</h2>
+          <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
         </a>
 
         {/* Team 2 */}
         <a
-          href="https://example.com/team2"
+          href="https://stthomaskannur.ac.in/ignite/dpoints/team/red.php"
           target="_blank"
           rel="noopener noreferrer"
           className="relative block p-6 bg-gray-800 text-white rounded-lg shadow-md transform transition-transform duration-700 hover:scale-110 hover:shadow-[0_4px_60px_rgba(255,69,0,1),0_0_80px_rgba(255,165,0,1)]"
@@ -54,12 +54,12 @@ const Teams = () => {
               borderRadius: "inherit"
             }}
           ></div>
-          <h2 className="relative z-10 mt-4 text-center text-lg font-bold">VANGUARDIANZ</h2>
+          <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
         </a>
 
         {/* Team 3 */}
         <a
-          href="https://example.com/team3"
+          href="https://stthomaskannur.ac.in/ignite/dpoints/team/blue.php"
           target="_blank"
           rel="noopener noreferrer"
           className="relative block p-6 bg-gray-800 text-white rounded-lg shadow-md transform transition-transform duration-700 hover:scale-110 hover:shadow-[0_4px_60px_rgba(255,255,255,1),0_0_80px_rgba(255,255,255,1)]"
@@ -78,12 +78,12 @@ const Teams = () => {
               borderRadius: "inherit"
             }}
           ></div>
-          <h2 className="relative z-10 mt-4 text-center text-lg font-bold">CRUSADERS</h2>
+          <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
         </a>
 
         {/* Team 4 */}
         <a
-          href="https://example.com/team4"
+          href="https://stthomaskannur.ac.in/ignite/dpoints/team/yellow.php"
           target="_blank"
           rel="noopener noreferrer"
           className="relative block p-6 bg-gray-800 text-white rounded-lg shadow-md transform transition-transform duration-700 hover:scale-110 hover:shadow-[0_4px_60px_rgba(138,43,226,1),0_0_80px_rgba(147,112,219,1)]"
@@ -102,7 +102,7 @@ const Teams = () => {
               borderRadius: "inherit"
             }}
           ></div>
-          <h2 className="relative z-10 mt-4 text-center text-lg font-bold">CYBORGS</h2>
+          <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
         </a>
       </div>
     </div>

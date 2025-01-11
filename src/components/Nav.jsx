@@ -64,8 +64,8 @@ const Nav = () => {
           <Link to="teams" smooth={true} duration={500} className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">
             TEAMS
           </Link>
-          <a href="#statistics" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">STATISTICS</a>
-          <a href="#register" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">REGISTER NOW</a>
+          <a href="https://stthomaskannur.ac.in/ignite/statistics" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">STATISTICS</a>
+          <a href="https://stthomaskannur.ac.in/ignite/" className="hover:text-emerald-800 transition-colors duration-300 cursor-pointer">REGISTER NOW</a>
         </div>
 
         {/* Mobile Menu (Modal Popup) */}
@@ -135,14 +135,14 @@ const Nav = () => {
                 TEAMS
               </Link>
               <a
-                href="#statistics"
+                href="https://stthomaskannur.ac.in/ignite/statistics/"
                 className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
                 STATISTICS
               </a>
               <a
-                href="#register"
+                href="https://stthomaskannur.ac.in/ignite/"
                 className="text-lg font-semibold cursor-pointer text-cyan-700 hover:text-emerald-800 w-full text-center"
                 onClick={closeMenu}
               >
