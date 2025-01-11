@@ -1,5 +1,5 @@
 import React from "react";
-import "./Scoreboard.css"; // Import custom CSS for advanced animations
+import "./scoreboard.css"; // Import custom CSS for advanced animations
 
 const Scoreboard = () => {
   // Hardcoded team data
