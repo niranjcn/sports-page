@@ -1,5 +1,5 @@
 import React from "react";
-import "./Scoreboard.css"; // Import custom CSS for the inverted triangle
+import "./Scoreboard.css"; // Import custom CSS for advanced animations
 
 const Scoreboard = () => {
   // Hardcoded team data
@@ -20,21 +20,31 @@ const Scoreboard = () => {
         {teams.map((team) => (
           <div
             key={team.id}
-            className="team-card bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out relative flex flex-col items-center"
+            className="team-card group bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out relative flex flex-col items-center"
           >
             {/* Inverted Triangle Shape with Logo */}
-            <div className="triangle w-36 h-36 bg-gray-800 shadow-lg flex items-center justify-center mb-4">
+            <div
+              className="triangle w-36 h-36 bg-gray-800 shadow-lg flex items-center justify-center mb-4 relative group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 ease-in-out"
+              style={{
+                clipPath: "polygon(50% 100%, 0 0, 100% 0)",
+              }}
+            >
               {team.logo ? (
                 <img
                   src={team.logo}
                   alt={`${team.name} Logo`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gray-600 text-gray-300 text-lg">
                   No Logo
                 </div>
               )}
+
+              {/* Neon light effect below the triangle */}
+              <div
+                className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-[170%] h-[80px] bg-cyan-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:h-[40px] group-hover:shadow-[0_0_80px_cyan] transition-all duration-300 ease-in-out"
+              />
             </div>
 
             {/* Score */}
@@ -47,3 +57,6 @@ const Scoreboard = () => {
 };
 
 export default Scoreboard;
+
+
+
