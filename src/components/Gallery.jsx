@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 // Import images
 import A1 from "../assets/images/A1.jpeg";
@@ -80,6 +81,11 @@ function Gallery() {
         )}
 
         {/* Grid Layout */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1.25 }}
+         >
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 z-10">
           {panels.map((panel, index) => (
             <div
@@ -95,6 +101,7 @@ function Gallery() {
             </div>
           ))}
         </div>
+        </motion.div>
       </div>
     </main>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion";
 
 // Full event list with schedules
 const events = {
@@ -119,6 +120,11 @@ const EventTable = () => {
     if (activeTab === 'gameList' || activeTab === 'athleticList') {
       const data = events[activeTab];
       return (
+        <motion.div
+                  initial={{ opacity: 0, y: 100 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  transition={{ duration: 1.25 }}
+                 >
         <table className="min-w-full table-auto border-collapse mt-6 text-white">
           <thead>
             <tr className="bg-gray-800">
@@ -135,10 +141,16 @@ const EventTable = () => {
             ))}
           </tbody>
         </table>
+        </motion.div>
       );
     } else if (activeTab === 'gameSchedule' || activeTab === 'athleticSchedule') {
       const data = events[activeTab];
       return (
+        <motion.div
+                  initial={{ opacity: 0, y: 100 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  transition={{ duration: 1.25 }}
+                 >
         <div className="overflow-y-auto max-h-[450px]">
           <table className="min-w-full table-auto border-collapse mt-6 text-white">
             <thead>
@@ -161,12 +173,18 @@ const EventTable = () => {
             </tbody>
           </table>
         </div>
+        </motion.div>
       );
     }
   };
 
   return (
     <div className="p-8 bg-gray-900 min-h-screen">
+      <motion.div
+                  initial={{ opacity: 0, y: 100 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  transition={{ duration: 1.25 }}
+                 >
       <h1 className="text-4xl font-bold mb-12 text-center text-cyan-700">EVENT SCHEDULE</h1>
       <div className="flex flex-wrap justify-center gap-4 mb-6">
         <button
@@ -195,6 +213,7 @@ const EventTable = () => {
         </button>
       </div>
       <div className="overflow-x-auto">{renderTable()}</div>
+      </motion.div>
     </div>
   );
 };

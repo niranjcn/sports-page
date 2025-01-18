@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./scoreboard.css"; 
 import RETREOS from "../assets/images/retreos.jpg"
 import ASSA from "../assets/images/Assa.jpg"
 import CRUS from "../assets/images/crus2.jpg"
@@ -21,6 +20,7 @@ const Scoreboard = () => {
       <h1 className="text-4xl font-bold mb-12 text-center text-cyan-700">SCORE BOARD</h1>
 
       {/* Grid Layout for Teams */}
+      
       <iframe
               src="https://stthomaskannur.ac.in/ignite/statistics/"
               className=" w-full h-full border-0"

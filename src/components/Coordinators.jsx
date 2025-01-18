@@ -1,5 +1,6 @@
 import React from "react";
 import ADARSH from "../assets/images/adharshsir.jpeg"
+import { motion } from "framer-motion";
 
 const Coordinators = () => {
   const coordinators = [
@@ -24,13 +25,22 @@ const Coordinators = () => {
      <h1 className="text-4xl font-bold mb-12 text-center text-cyan-700">
   OUR COORDINATORS
 </h1>
-
+<motion.div
+          initial={{ opacity: 0, y: 100 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1.25 }}
+         > 
       <div className="flex flex-wrap justify-center gap-12 mt-12">
         {coordinators.map((coordinator, index) => (
           <div
             key={index}
             className="bg-gray-800 w-80 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 p-6"
           >
+           <motion.div
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1 }}
+         >
             <div className="flex flex-col items-center">
               <img
                 src={coordinator.image}
@@ -49,9 +59,11 @@ const Coordinators = () => {
                 {coordinator.phone}
               </a>
             </div>
+            </motion.div>
           </div>
         ))}
       </div>
+      </motion.div>
     </div>
   );
 };
