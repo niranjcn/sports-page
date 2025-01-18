@@ -1,12 +1,15 @@
 import React from "react";
+import RETREOS from "../assets/images/retreos.jpg";
+import ASSA from "../assets/images/Assa.jpg";
+import CRUS from "../assets/images/crus2.jpg";
+import CYB from "../assets/images/cyborgs.jpg";
 
 const Teams = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 px-8 py-12">
       <h1 className="text-4xl font-bold mb-20 text-center text-cyan-700">
-  OUR TEAMS
-</h1>
-
+        OUR TEAMS
+      </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Team 1 */}
@@ -26,8 +29,8 @@ const Teams = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/images/team1.png')",
-              borderRadius: "inherit"
+              backgroundImage: `url(${RETREOS})`,
+              borderRadius: "inherit",
             }}
           ></div>
           <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
@@ -50,8 +53,8 @@ const Teams = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('https://www.stthomaskannur.ac.in/ignite2023/assets/img/VANGUARDIANZ.jpg')",
-              borderRadius: "inherit"
+              backgroundImage: `url(${ASSA})`,
+              borderRadius: "inherit",
             }}
           ></div>
           <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
@@ -74,8 +77,8 @@ const Teams = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('https://www.stthomaskannur.ac.in/ignite2023/assets/img/CRUSADERS.png')",
-              borderRadius: "inherit"
+              backgroundImage: `url(${CRUS})`,
+              borderRadius: "inherit",
             }}
           ></div>
           <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
@@ -92,14 +95,14 @@ const Teams = () => {
             height: "400px",
             width: "300px",
             filter: "brightness(0.85)",
-            transition: "filter 1.0s ease, transform 0.7s ease", 
+            transition: "filter 1.0s ease, transform 0.7s ease",
           }}
         >
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('https://www.stthomaskannur.ac.in/ignite/statistics/img/cyborgs.jpg')",
-              borderRadius: "inherit"
+              backgroundImage: `url(${CYB})`,
+              borderRadius: "inherit",
             }}
           ></div>
           <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
@@ -110,3 +113,4 @@ const Teams = () => {
 };
 
 export default Teams;
+

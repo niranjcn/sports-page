@@ -1,21 +1,36 @@
 import { useState } from "react";
 
+// Import images
+import A1 from "../assets/images/A1.jpeg";
+import A2 from "../assets/images/A2.jpg";
+import A4 from "../assets/images/A4.jpg";
+import A5 from "../assets/images/A5.jpeg";
+import AL1 from "../assets/images/AL1.jpeg";
+import AL2 from "../assets/images/AL2.jpeg";
+import AL4 from "../assets/images/AL4.jpeg";
+import G1 from "../assets/images/G1.jpg";
+
 function Gallery() {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
+  // Use imported images in the panels array
   const panels = [
-    { image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/portfolio/AL1.jpeg" },
-    { image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/portfolio/A1.jpeg" },
-    { image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/portfolio/AL2.jpeg" },
-    { image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/portfolio/G2.jpeg" },
-    { image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/portfolio/A2.jpg" },
-    { image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/portfolio/AL4.jpeg" },
-    { image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/portfolio/G1.jpg" },
-    { image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/portfolio/A5.jpeg" },
+    { image: A1 },
+    { image: A2 },
+    { image: A4 },
+    { image: A5 },
+    { image: AL1 },
+    { image: AL2 },
+    { image: AL4 },
+    { image: G1 },
   ];
 
   const handleClick = (index) => {
     setExpandedIndex(index === expandedIndex ? null : index); // Toggle the expanded image
+  };
+
+  const handleClose = () => {
+    setExpandedIndex(null); // Close the expanded image
   };
 
   return (
@@ -38,8 +53,28 @@ function Gallery() {
               <img
                 src={panels[expandedIndex].image}
                 alt="Expanded"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
+              {/* Close Button */}
+              <button
+                onClick={handleClose}
+                className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         )}
@@ -54,7 +89,7 @@ function Gallery() {
             >
               <img
                 src={panel.image}
-                alt=""
+                alt="Gallery Image"
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
@@ -66,3 +101,5 @@ function Gallery() {
 }
 
 export default Gallery;
+
+

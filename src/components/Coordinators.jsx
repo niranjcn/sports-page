@@ -1,4 +1,5 @@
 import React from "react";
+import ADARSH from "../assets/images/adharshsir.jpeg"
 
 const Coordinators = () => {
   const coordinators = [
@@ -7,13 +8,13 @@ const Coordinators = () => {
       title: "Assistant Professor",
       department: "Mechanical Department",
       phone: "+919995028016",
-      image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/sir.jpeg",
+      image: ADARSH ,
     },
     {
-      name: "ADARSH MADHU",
+      name: "VARUN P V",
       title: "Assistant Professor",
       department: "Mechanical Department",
-      phone: "+919995028016",
+      phone: "+919495124062",
       image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/sir.jpeg",
     },
   ];
