@@ -3,6 +3,7 @@ import RETREOS from "../assets/images/retreos.jpg";
 import ASSA from "../assets/images/Assa.jpg";
 import CRUS from "../assets/images/crus2.jpg";
 import CYB from "../assets/images/cyborgs.jpg";
+import { motion } from "framer-motion";
 
 const Teams = () => {
   return (
@@ -13,6 +14,11 @@ const Teams = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Team 1 */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1.75 }}
+         >
         <a
           href="https://stthomaskannur.ac.in/ignite/dpoints/team/green.php"
           target="_blank"
@@ -35,8 +41,14 @@ const Teams = () => {
           ></div>
           <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
         </a>
+        </motion.div>
 
         {/* Team 2 */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1.5 }}
+         >
         <a
           href="https://stthomaskannur.ac.in/ignite/dpoints/team/red.php"
           target="_blank"
@@ -59,8 +71,14 @@ const Teams = () => {
           ></div>
           <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
         </a>
+        </motion.div>
 
         {/* Team 3 */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} 
+          whileInView={{ opacity:1,  y: 0 }} 
+          transition={{ duration: 1.25 }}
+         >
         <a
           href="https://stthomaskannur.ac.in/ignite/dpoints/team/blue.php"
           target="_blank"
@@ -83,8 +101,14 @@ const Teams = () => {
           ></div>
           <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
         </a>
+        </motion.div>
 
         {/* Team 4 */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1 }}
+         >
         <a
           href="https://stthomaskannur.ac.in/ignite/dpoints/team/yellow.php"
           target="_blank"
@@ -107,6 +131,7 @@ const Teams = () => {
           ></div>
           <h2 className="relative z-10 mt-4 text-center text-lg font-bold"></h2>
         </a>
+        </motion.div>
       </div>
     </div>
   );

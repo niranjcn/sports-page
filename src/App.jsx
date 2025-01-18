@@ -29,20 +29,21 @@ function App() {
           <Coordinators />
         </section>
 
-        <section id="scoreboard">
-          <Scoreboard />
-        </section>
+        
 
         <section id="gallery">
           <Gallery />
         </section>
 
 
+        <section id="scoreboard">
+          <Scoreboard />
+        </section>
+
         <section id="events">
           <Events />
         </section>
 
-       
 
        
         
