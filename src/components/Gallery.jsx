@@ -11,6 +11,7 @@ import AL2 from "../assets/images/AL2.jpeg";
 import AL4 from "../assets/images/AL4.jpeg";
 import G1 from "../assets/images/G1.jpg";
 
+
 function Gallery() {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -35,10 +36,13 @@ function Gallery() {
   };
 
   return (
+    
     <main className="w-full h-auto bg-gray-900 py-16">
       <div className="text-center mb-20">
         <h1 className="text-4xl font-bold text-cyan-700">GALLERY</h1>
       </div>
+
+      
 
       {/* Main Gallery */}
       <div
