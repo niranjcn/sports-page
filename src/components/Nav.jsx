@@ -18,7 +18,7 @@ const Nav = () => {
       <nav className="h-28 w-full bg-white flex items-center justify-between px-6 border-b border-gray-200 shadow-md">
         {/* Main logo with adjusted margin to move it left in mobile view */}
         <div className="ml-3 mr-3 sm:ml-0"> {/* Added sm:ml-0 to reset margin on larger screens */}
-          <img src={stmlogo} alt="St Thomas Kannur" className="lg:h-20 lg:w-auto lg:mt-2 sm:h-16" />
+          <img src={stmlogo} alt="St Thomas Kannur" className="lg:h-20 lg:w-auto lg:mt-2" />
         </div>
 
         {/* Hamburger Icon for small screens */}

@@ -1,5 +1,6 @@
 import React from "react";
 import ADARSH from "../assets/images/adharshsir.jpeg"
+import VARUN from "../assets/images/varunsir.jpg"
 import { motion } from "framer-motion";
 
 const Coordinators = () => {
@@ -16,7 +17,7 @@ const Coordinators = () => {
       title: "Assistant Professor",
       department: "Mechanical Department",
       phone: "+919495124062",
-      image: "https://www.stthomaskannur.ac.in/ignite2023/assets/img/sir.jpeg",
+      image: VARUN,
     },
   ];
 
