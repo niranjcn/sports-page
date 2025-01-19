@@ -12,7 +12,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full h-[80vh] sm:h-[90vh] md:h-[90vh] lg:h-screen bg-black">
+    <div className="relative w-full h-[90vh] sm:h-[90vh] md:h-[90vh] lg:h-screen bg-black">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-50"
