@@ -57,7 +57,7 @@ function Slider() {
     <div className="max-w-full h-auto w-full m-auto  pb-16  relative group bg-gray-900">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-[40vh] sm:h-[40vh] md:h-[80vh] lg:h-[100vh] bg-no-repeat bg-center bg-cover overflow-hidden  transition-all transform duration-1000 ease-in-out"
+        className="w-full h-[30vh] sm:h-[40vh]  md:h-[80vh] lg:h-[100vh] bg-no-repeat bg-center bg-cover overflow-hidden  transition-all transform duration-1000 ease-in-out"
       ></div>
       {/* Left Arrow */}
       <div className="hidden group-hover:block absolute  top-[50%] lg:top-[50%] sm:top-[20%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
