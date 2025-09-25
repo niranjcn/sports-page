@@ -1,16 +1,11 @@
 import React from 'react';
-import LOGOM from "../assets/images/logomain.png";
-import { BsMouse } from "react-icons/bs";
 import { motion } from "framer-motion";
 import BANNERIMAGE from "../assets/images/bannerimage.png";
-import Land3 from "../assets/videos/land3.mp4";
+import Land4 from "../assets/videos/land4.mp4";
+import BANIMG from "../assets/images/banimg.jpg";
+import Land6 from "../assets/videos/land6.mp4";
 
 const Banner = () => {
-  // Animation variants for framer-motion
-  const fadeUpVariant = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-  };
 
   return (
     <div className="relative w-full h-[90vh] sm:h-[90vh] md:h-[90vh] lg:h-screen overflow-hidden">
@@ -20,82 +15,54 @@ const Banner = () => {
         loop
         muted
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        poster= {BANNERIMAGE}
+        poster= {BANIMG}
       >
-        <source src={Land3} type="video/mp4" />
+        <source src={Land4} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Dark Overlay for better text readability */}
       <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
 
-      {/* All Overlay Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
-        
-        {/* Event Logo Animation - Using your 'LOGOM' import */}
-        <motion.img
-          src={LOGOM}
-          alt="Event Logo"
-          className="w-28 sm:w-32 md:w-48 lg:w-56 h-auto mb-6 object-contain"
-          variants={fadeUpVariant}
-          initial="hidden"
-          animate="visible"
-        />
-
-        {/* Event Name with Gradient Text */}
-        <motion.h1
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold mb-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
-          variants={fadeUpVariant}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.3 }}
-        >
-          IGNITE 2025
-        </motion.h1>
-
-        {/* Subheading Text */}
-        <motion.h3
-          className="text-sm sm:text-base md:text-xl lg:text-2xl font-medium text-gray-200 mb-8"
-          variants={fadeUpVariant}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.5 }}
-        >
-          St. Thomas College of Engineering & Technology
-        </motion.h3>
-
-        {/* Revamped Register Now Button */}
+      {/* Futuristic Registration Button - Positioned at Bottom */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
         <motion.a
           href="https://stthomaskannur.ac.in/ignite/"
-          className="px-8 py-3 sm:px-10 sm:py-4 rounded-full text-white font-bold text-sm sm:text-base md:text-xl transition-all duration-300 mb-12
-                     bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg shadow-purple-500/50
-                     hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/80"
-          variants={fadeUpVariant}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.7 }}
+          className="group relative overflow-hidden
+                     px-8 py-3 bg-gray-900/80 backdrop-blur-md text-cyan-400 font-bold text-sm
+                     border border-cyan-500/50 rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.3)]
+                     hover:border-cyan-400 hover:text-white hover:shadow-[0_0_30px_rgba(6,182,212,0.6)]
+                     transition-all duration-300 transform hover:scale-105"
+          initial={{ opacity: 0, y: 30, rotateX: -15 }}
+          animate={{ opacity: 1, y: 0, rotateX: 0 }}
+          transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 100 }}
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.95 }}
         >
-          REGISTER NOW
-        </motion.a>
-
-      </div>
-
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <motion.div
-          className="text-white text-center flex flex-col items-center"
-          variants={fadeUpVariant}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.9 }}
-        >
-          <span className="text-xs sm:text-sm md:text-base font-medium mb-2">
-            Scroll Down
+          {/* Animated Background Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-blue-500/20 
+                          opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+          
+          {/* Glowing Border Effect */}
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl blur 
+                          opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+          
+          {/* Button Text */}
+          <span className="relative z-10 tracking-wide">
+            REGISTER NOW
           </span>
-          <div className="animate-bounce">
-            <BsMouse size={24} />
-          </div>
-        </motion.div>
+          
+          {/* Futuristic Shine Effect */}
+          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full 
+                          bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent 
+                          transition-transform duration-700 rounded-xl skew-x-12"></div>
+          
+          {/* Corner Accent Lines */}
+          <div className="absolute top-0 left-0 w-3 h-0.5 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute top-0 left-0 w-0.5 h-3 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute bottom-0 right-0 w-3 h-0.5 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute bottom-0 right-0 w-0.5 h-3 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </motion.a>
       </div>
     </div>
   );
