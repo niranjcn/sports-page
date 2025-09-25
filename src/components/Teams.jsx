@@ -1,5 +1,5 @@
 import React from "react";
-import KALHAAR from "../assets/images/Kalhaar.png";
+import KALHAAR from "../assets/images/kalhaar.png";
 import ASSA from "../assets/images/Assa.jpg";
 import CRUS from "../assets/images/crus2.jpg";
 import ADH from "../assets/images/adhera.jpg";
