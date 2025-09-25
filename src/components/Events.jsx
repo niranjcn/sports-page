@@ -185,15 +185,16 @@ const GameScheduleTable = ({ data }) => (
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="overflow-x-auto scrollbar-thin scrollbar-thumb-cyan-500 scrollbar-track-gray-800"
+        className="events-horizontal-scroll overflow-x-auto scrollbar-thin scrollbar-thumb-cyan-500 scrollbar-track-gray-800"
         style={{
             scrollbarWidth: 'thin',
             scrollbarColor: '#06b6d4 #1f2937'
         }}
     >
-        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-3xl border border-gray-800/50 shadow-2xl overflow-hidden">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl blur"></div>
-            <table className="relative min-w-full table-auto">
+        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-3xl border border-gray-800/50 shadow-2xl">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl blur pointer-events-none"></div>
+            {/* Set a wider min-width so on narrow screens the user can horizontally scroll only this section */}
+            <table className="relative min-w-[760px] md:min-w-full table-auto">
                 <thead className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-sm">
                     <tr>
                         <th className="px-8 py-6 text-left text-sm font-bold text-cyan-400 uppercase tracking-wider border-b border-cyan-500/20">
@@ -275,15 +276,15 @@ const AthleticScheduleTable = ({ data }) => (
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="overflow-x-auto scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-800"
+        className="events-horizontal-scroll overflow-x-auto scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-800"
         style={{
             scrollbarWidth: 'thin',
             scrollbarColor: '#f97316 #1f2937'
         }}
     >
-        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-3xl border border-gray-800/50 shadow-2xl overflow-hidden">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-3xl blur"></div>
-            <table className="relative min-w-full table-auto">
+        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-3xl border border-gray-800/50 shadow-2xl">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-3xl blur pointer-events-none"></div>
+            <table className="relative min-w-[760px] md:min-w-full table-auto">
                 <thead className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-sm">
                     <tr>
                         <th className="px-8 py-6 text-left text-sm font-bold text-orange-400 uppercase tracking-wider border-b border-orange-500/20">

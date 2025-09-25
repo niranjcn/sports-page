@@ -59,5 +59,34 @@
   background-color: #ea580c;
 }
 
+/* -------------------------------------------------- */
+/* Global scrollbar removal (hide right side scrollbar) */
+/* Keeps page scroll functionality while hiding visual */
+/* -------------------------------------------------- */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+  background: transparent !important;
+}
+
+/* Utility in case you want to hide on a specific container only */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Events horizontal scroll container (local horizontal scrolling only) */
+.events-horizontal-scroll {
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 
