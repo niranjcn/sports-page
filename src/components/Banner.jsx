@@ -2,8 +2,7 @@ import React from 'react';
 import LOGOM from "../assets/images/logomain.png";
 import { BsMouse } from "react-icons/bs";
 import { motion } from "framer-motion";
-import Land from "../assets/videos/land1.mp4";
-import Land2 from "../assets/videos/land2.mp4";
+import BANNERIMAGE from "../assets/images/bannerimage.png";
 import Land3 from "../assets/videos/land3.mp4";
 
 const Banner = () => {
@@ -21,6 +20,7 @@ const Banner = () => {
         loop
         muted
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        poster= {BANNERIMAGE}
       >
         <source src={Land3} type="video/mp4" />
         Your browser does not support the video tag.
