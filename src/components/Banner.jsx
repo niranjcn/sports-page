@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SOC from "../assets/images/soc.png";
 import LOGOM from "../assets/images/logomain.png";
+import MAIN from "../assets/videos/main.mp4";
 import { BsMouse } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-const Banner = () => {
+/**
+ * Banner component
+ * Props:
+ *  - backgroundVideo (string | undefined): path/URL to video. If undefined, falls back to static image.
+ *  - posterImage (string): image shown before video loads / as fallback.
+ */
+const Banner = ({ backgroundVideo = MAIN, posterImage = SOC }) => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
   // Animation variants
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 50 },
@@ -12,17 +20,45 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full h-[88vh] md:h-[92vh] lg:h-screen bg-black overflow-hidden">
-      {/* Background base image */}
+    <div className="relative w-full h-[100vh] md:h-[102vh] lg:h-[105vh] bg-black overflow-hidden">
+      {/* Background layer: either video (preferred) or image fallback */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center scale-105 animate-pulse slow opacity-40"
-          style={{ backgroundImage: `url(${SOC})` }}
-        />
-        {/* Gradient + vignette overlays */}
+        {backgroundVideo ? (
+          <>
+            {/* Poster while video loading */}
+            {!videoLoaded && (
+              <img
+                src={posterImage}
+                alt="Ignite background placeholder"
+                className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none scale-105 opacity-60 animate-pulse"
+                draggable={false}
+              />
+            )}
+            <video
+              className="absolute inset-0 w-full h-full object-cover object-center" 
+              src={backgroundVideo}
+              poster={posterImage}
+              autoPlay
+              playsInline
+              muted
+              loop
+              preload="auto"
+              onLoadedData={() => setVideoLoaded(true)}
+              aria-hidden="true"
+            />
+          </>
+        ) : (
+          <div
+            className="absolute inset-0 bg-cover bg-center scale-105 animate-pulse opacity-50"
+            style={{ backgroundImage: `url(${posterImage})` }}
+          />
+        )}
+        {/* Overlays for better contrast */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.55)_70%,rgba(0,0,0,0.85)_100%)]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-700/20 via-purple-800/10 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-700/25 via-purple-800/10 to-black" />
         <div className="absolute inset-0 backdrop-blur-[2px]" />
+  {/* Subtle texture replacement (removed inline SVG to avoid JSX parsing issues) */}
+  <div className="absolute inset-0 pointer-events-none opacity-[0.08] bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.08),transparent_70%)]" />
       </div>
 
       {/* Decorative floating glows */}
@@ -102,7 +138,7 @@ const Banner = () => {
 
         {/* Scroll prompt */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/70"
+          className="absolute bottom-8 inset-x-0 flex flex-col items-center text-white/70"
           variants={fadeUpVariant}
           initial="hidden"
           animate="visible"
@@ -111,6 +147,13 @@ const Banner = () => {
           <span className="text-[10px] sm:text-xs tracking-widest mb-2 font-medium uppercase">Scroll</span>
           <BsMouse size={24} className="animate-bounce opacity-80" />
         </motion.div>
+        {/* Loading indicator (subtle) if video not ready */}
+        {backgroundVideo && !videoLoaded && (
+          <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-wider text-cyan-200/60 flex items-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+            Loading video...
+          </div>
+        )}
       </div>
     </div>
   );

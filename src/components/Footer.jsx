@@ -31,7 +31,7 @@ const EmailIcon = () => (
 
 const Footer = () => {
     return (
-        <footer className="relative text-white py-12 px-4">
+    <footer className="relative text-white py-12 pb-24 px-4 mt-20">
             <div className="relative z-10 container mx-auto">
                 {/* Minimal Footer Content */}
                 <motion.div 

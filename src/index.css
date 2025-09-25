@@ -88,5 +88,27 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Vertical scrollbar styling for event tables */
+.custom-vert-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-vert-scroll::-webkit-scrollbar-track {
+  background: rgba(31,41,55,0.6);
+  border-radius: 8px;
+}
+.custom-vert-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #06b6d4, #8b5cf6);
+  border-radius: 8px;
+}
+.custom-vert-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0891b2, #7c3aed);
+}
+
+/* Firefox */
+.custom-vert-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 #1f2937;
+}
+
 
 

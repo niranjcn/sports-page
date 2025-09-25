@@ -126,7 +126,7 @@ const EventListTable = ({ data }) => (
             scrollbarColor: '#a855f7 #1f2937'
         }}
     >
-        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-2xl border border-gray-800/50 shadow-2xl overflow-hidden">
+        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-2xl border border-gray-800/50 shadow-2xl overflow-hidden max-h-[420px] overflow-y-auto pr-2 custom-vert-scroll">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur"></div>
             <table className="relative min-w-full table-auto">
                 <thead className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-sm">
@@ -191,7 +191,7 @@ const GameScheduleTable = ({ data }) => (
             scrollbarColor: '#06b6d4 #1f2937'
         }}
     >
-        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-3xl border border-gray-800/50 shadow-2xl">
+        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-3xl border border-gray-800/50 shadow-2xl max-h-[460px] overflow-y-auto pr-2 custom-vert-scroll">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl blur pointer-events-none"></div>
             {/* Set a wider min-width so on narrow screens the user can horizontally scroll only this section */}
             <table className="relative min-w-[760px] md:min-w-full table-auto">
@@ -282,7 +282,7 @@ const AthleticScheduleTable = ({ data }) => (
             scrollbarColor: '#f97316 #1f2937'
         }}
     >
-        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-3xl border border-gray-800/50 shadow-2xl">
+        <div className="relative bg-gray-900/30 backdrop-blur-md rounded-3xl border border-gray-800/50 shadow-2xl max-h-[460px] overflow-y-auto pr-2 custom-vert-scroll">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-3xl blur pointer-events-none"></div>
             <table className="relative min-w-[760px] md:min-w-full table-auto">
                 <thead className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-sm">
