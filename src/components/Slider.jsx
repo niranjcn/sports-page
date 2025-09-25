@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-import BAN1 from "../assets/images/ban1.jpg"
-import BAN2 from "../assets/images/ban2.jpg"
-import BAN3 from "../assets/images/ban3.jpg"
+import BAN1 from "../assets/images/slide1.jpg"
+import BAN2 from "../assets/images/slide2.jpg"
+import BAN3 from "../assets/images/slide3.jpg"
 
 
 
@@ -54,7 +54,7 @@ function Slider() {
   }, [currentIndex]); // Re-run this effect whenever `currentIndex` changes
 
   return (
-    <div className="max-w-full h-auto w-full m-auto  pb-16  relative group bg-gray-900">
+    <div className="max-w-full h-auto w-full m-auto pb-16 relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-[30vh] sm:h-[40vh]  md:h-[80vh] lg:h-[100vh] bg-no-repeat bg-center bg-cover overflow-hidden  transition-all transform duration-1000 ease-in-out"

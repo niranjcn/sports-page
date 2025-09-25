@@ -1,39 +1,98 @@
-import React from "react";
+import { motion } from "framer-motion";
+
+// Instagram Icon SVG
+const InstagramIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+
+// Website Icon SVG
+const WebsiteIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="2" y1="12" x2="22" y2="12"></line>
+    <path d="m4.93 4.93 4.24 4.24"></path>
+    <path d="m14.83 9.17 4.24-4.24"></path>
+    <path d="m14.83 14.83 4.24 4.24"></path>
+    <path d="m9.17 14.83-4.24 4.24"></path>
+  </svg>
+);
+
+// Email Icon SVG
+const EmailIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+  </svg>
+);
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-b from-gray-900 to-black bg-opacity-80 text-white py-6">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-1 gap-6 text-center md:text-left">
-                <div>
-                    <h3 className="text-center font-bold mb-2">Follow Us</h3>
-                    <div className="flex justify-center md:justify-center">
-                        <a
-                            href="https://www.instagram.com/stm_kannur_official_?igsh=ODdmYm1ja2JnNHF3"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-blue-400"
-                        >
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                                alt="Instagram"
-                                className="w-6 h-6 inline"
-                            />
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div className="text-center mt-6 text-sm border-t border-gray-700 pt-4">
-                <p>&copy; {new Date().getFullYear()} Copyright STM. All Rights Reserved.</p>
-                <p>Designed By</p> 
-                <a
-                    href="https://www.vblazeatstm.tk/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold underline text-blue-600 hover:text-blue-800"
+        <footer className="relative text-white py-12 px-4">
+            <div className="relative z-10 container mx-auto">
+                {/* Minimal Footer Content */}
+                <motion.div 
+                    className="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
                 >
-                    Vblaze
-                </a>
+                    {/* Left: College & Event Info */}
+                    <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
+                        <div className="text-sm text-slate-300">
+                            <p className="font-semibold text-cyan-400">🏆 IGNITE 2K25</p>
+                            <p>STM College Kannur</p>
+                        </div>
+                        
+                        {/* Social Links */}
+                        <div className="flex space-x-3">
+                            <a
+                                href="https://www.instagram.com/stm_kannur_official_?igsh=ODdmYm1ja2JnNHF3"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative inline-flex items-center justify-center w-8 h-8 bg-slate-800/50 backdrop-blur-sm rounded-full border border-slate-600 transition-all duration-300 hover:border-pink-400 hover:scale-110"
+                                title="Follow us on Instagram"
+                            >
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full blur opacity-0 group-hover:opacity-75 transition duration-300"></div>
+                                <span className="relative text-slate-400 group-hover:text-white transition-colors duration-300">
+                                   <InstagramIcon />
+                                </span>
+                            </a>
+                            <a
+                                href="https://stthomaskannur.ac.in"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative inline-flex items-center justify-center w-8 h-8 bg-slate-800/50 backdrop-blur-sm rounded-full border border-slate-600 transition-all duration-300 hover:border-cyan-400 hover:scale-110"
+                                title="Visit College Website"
+                            >
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur opacity-0 group-hover:opacity-75 transition duration-300"></div>
+                                <span className="relative text-slate-400 group-hover:text-white transition-colors duration-300">
+                                    <WebsiteIcon />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Right: Copyright & Credits */}
+                    <div className="text-xs text-slate-400 text-center md:text-right">
+                        <p>&copy; {new Date().getFullYear()} STM College Kannur</p>
+                        <p>
+                            Designed by{' '}
+                            <a
+                                href="https://www.vblazeatstm.tk/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:drop-shadow-[0_0_5px_rgba(103,232,249,0.5)] transition-all duration-300"
+                            >
+                                CODNOX
+                            </a>
+                        </p>
+                    </div>
+                </motion.div>
             </div>
         </footer>
     );
