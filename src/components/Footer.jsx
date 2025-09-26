@@ -45,8 +45,7 @@ const Footer = () => {
                     <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
                         <div className="text-sm text-slate-300">
                             <p className="font-semibold text-cyan-400">🏆 IGNITE 2K25</p>
-                            <p>STM 
-                                 Kannur</p>
+                            <p>STM College Kannur</p>
                         </div>
                         
                         {/* Social Links */}
